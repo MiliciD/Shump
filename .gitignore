@@ -1,0 +1,6 @@
+.godot/
+.import/
+*.apk
+*.apk.idsig
+export_presets.cfg
+android/build/
