@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
+const SPEED = 1600.0
 var target_position: Vector2
 const BulletScene = preload("res://bullet.tscn")
 
@@ -12,7 +12,7 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch or event is InputEventScreenDrag:
 		target_position = event.position
-		print(target_position)
+##		print(target_position)
 
 func _physics_process(delta: float) -> void:
 	global_position = global_position.move_toward(target_position, SPEED*delta)

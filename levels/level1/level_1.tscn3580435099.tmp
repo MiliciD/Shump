@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://drivb2tchgx1r"]
+
+[ext_resource type="Script" uid="uid://ch5t842i8inkj" path="res://levels/level_blueprint.gd" id="1_jirdo"]
+[ext_resource type="PackedScene" uid="uid://bb7dufuyquy28" path="res://Player.tscn" id="2_bt44k"]
+[ext_resource type="Script" uid="uid://hnmobb5eqjqa" path="res://resources/wave_data.gd" id="2_kx6l7"]
+[ext_resource type="Resource" uid="uid://b4u8oax8cljix" path="res://resources/wave1.tres" id="3_n46q3"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_jirdo")
+waves = Array[ExtResource("2_kx6l7")]([ExtResource("3_n46q3")])
+
+[node name="EnemyContainer" type="Node2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("2_bt44k")]
